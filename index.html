@@ -1,3 +1,5 @@
+<h1>Grain-128AEAD</h1>
+
 <p>Grain-128AEAD is a stream cipher supporting authenticated encryption with associated data. It is currently one of the ciphers in the NIST lightweight crypto standardization process.</p>
 
 <p>Here, we collect material related to the cipher, including design documents, hardware and software implementations, and analysis results. If you are aware of documents or results that should be shown here, please let us know through hirotaka.yoshida@@aist.go.jp or martin.hell@eit.lth.se. We'd be happy to link to any third party material.</p>
@@ -6,14 +8,27 @@
 
 
 <br>
-Design documents
-<br><br>
+<h3>Design documents</h3>
+<ul>
+<li>Martin Hell, Thomas Johansson, Willi Meier, Jonathan Sönnerup and Hirotaka Yoshida: <a href="C2SI2019_Grain_128AEAD.pdf">An AEAD variant of the Grain stream cipher</a>. C2SI 2019.<br>
+This paper presents the core design of Grain-128AEAD. Note that it does not follow the NIST API as it does not e.g., explicitly handle variable length associated data.</li>
+<li>Martin Hell, Thomas Johansson, Willi Meier, Jonathan Sönnerup and Hirotaka Yoshida: <a href="https://csrc.nist.gov/CSRC/media/Projects/lightweight-cryptography/documents/round-2/spec-doc-rnd2/grain-128aead-spec-round2.pdf">Grain-128AEAD - A lightweight AEAD stream cipher</a>. NIST 2019.<br>
+This is the official round 2 specification of the design (on NISTs website). Note that it is identical to the round 1 specification.</li>
+</ul>
+ 
 
-Hardware implementation<br>
-Jonathan Sönnerup, Martin Hell, Mattias Sönnerup and Ripudaman Khattar - Efficient Hardware Implementations of Grain-128AEAD. Indocrypt 2019. <br>
-<br><br>
+<h3>Hardware implementation</h3>
+<ul>
+<li>Jonathan Sönnerup, Martin Hell, Mattias Sönnerup and Ripudaman Khattar: <a href="HW_indo19.pdf">Efficient Hardware Implementations of Grain-128AEAD</a>. Indocrypt 2019. <br>
+This paper presents a hardware implementation (VHDL) in 65nm technology. Synthesis and power simulations is done using the Synopsys Design Compiler 2013.12. The implementation can be found on the <a href="https://github.com/Grain-128AEAD">Grain-128AEAD repo</a> on Github.</li>
+</ul>
 
-Software implementation
-<br><br>
 
-Analysis
+<h3>Software implementation</h3>
+<ul>
+<li>The reference software implementation can be found in the <a href="https://github.com/Grain-128AEAD">Grain-128AEAD repo</a> on Github. The reference implementation is also available on <a href="https://csrc.nist.gov/Projects/lightweight-cryptography/round-2-candidates">NISTs round 2 website</a>.</li>
+</ul>
+
+
+<h3>Analysis</h3>
+We do not know of any explicit analysis of Grain-128AEAD. However, the design is similar to Grain-128a and some analysis on that cipher can be found in the design document.
