@@ -35,7 +35,7 @@
 
         <p>Grain-128AEAD is a stream cipher supporting authenticated encryption with associated data. It is currently one of the ciphers in the NIST lightweight crypto standardization process.</p>
 
-        <p>Here, we collect material related to the cipher, including design documents, hardware and software implementations, and analysis results. If you are aware of documents or results that should be shown here, please let us know through hirotaka.yoshida@@aist.go.jp or martin.hell@eit.lth.se. We'd be happy to link to any third party material.</p>
+        <p>Here, we collect material related to the cipher, including design documents and hardware/software implementations. If you are aware of documents or results that should be shown here, please let us know through hirotaka.yoshida@@aist.go.jp or martin.hell@eit.lth.se. We'd be happy to link to any third party material.</p>
 
         <p>Grain-128AEAD is a member of the Grain family of stream ciphers. Many of the other variants in the family have undergone much analysis. Those results, while sometimes also valid for Grain-128AEAD, will not be featured on this website. However, the design document includes several references to these for anyone interested.</p>
 
@@ -58,11 +58,10 @@
         <h3>Software implementation</h3>
         <ul>
         <li>The reference software implementation can be found in the <a href="https://github.com/Grain-128AEAD">Grain-128AEAD repo</a> on Github. The reference implementation is also available on <a href="https://csrc.nist.gov/Projects/lightweight-cryptography/round-2-candidates">NISTs round 2 website</a>.</li>
+		<li>Alexander Maximov and Martin Hell: <a href="https://eprint.iacr.org/2020/659.pdf">Software Evaluation of Grain-128AEAD for Embedded Platforms</a>. ePrint 2020/659.<br>
+		This paper describes implementations optimized for embedded platforms. The two smallest processors in the FELICS-AEAD framework are used as target, the 8-bit AVR ATmega 128 and the 16-bit MSP430F1611.</li>
         </ul>
 
-
-        <h3>Analysis</h3>
-        We do not know of any explicit analysis of Grain-128AEAD. However, the design is similar to Grain-128a and some analysis on that cipher can be found in the design document.
 
       </div>
     </div>
