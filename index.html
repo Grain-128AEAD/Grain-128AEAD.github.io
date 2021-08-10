@@ -41,25 +41,30 @@
 
         <h3>Design documents</h3>
         <ul>
-        <li>Martin Hell, Thomas Johansson, Willi Meier, Jonathan Sönnerup and Hirotaka Yoshida: <a href="C2SI2019_Grain_128AEAD.pdf">An AEAD variant of the Grain stream cipher</a>. C2SI 2019.<br>
-        This paper presents the core design of Grain-128AEAD. Note that it does not follow the NIST API as it does not e.g., explicitly handle variable length associated data.</li>
+	<li>Martin Hell, Thomas Johansson, Alexander Maximov, Willi Meier and Hirotaka Yoshida: <a href="strengthening-eprintVersion">Grain-128AEADv2: Strengthening the Initialization Against Key Reconstruction</a>.<br>
+        This document discusses in detail the motivation behind the changes made to the version 2 of the algorithm compared to the first version. It is the same document as published on eprint (2021/751).</li>	
+	<li>Martin Hell, Thomas Johansson, Alexander Maximov, Willi Meier, Jonathan Sönnerup and Hirotaka Yoshida: <a href="https://csrc.nist.gov/CSRC/media/Projects/lightweight-cryptography/documents/finalist-round/updated-spec-doc/grain-128aead-spec-final.pdf">Grain-128AEADv2 - A lightweight AEAD stream cipher</a>. NIST 2021.<br>
+        This is the official round 3 (finalist) specification of the design (on NISTs website). It presents an update to the version in the first two rounds and is denoted Grain-128AEADv2.</li>
         <li>Martin Hell, Thomas Johansson, Willi Meier, Jonathan Sönnerup and Hirotaka Yoshida: <a href="https://csrc.nist.gov/CSRC/media/Projects/lightweight-cryptography/documents/round-2/spec-doc-rnd2/grain-128aead-spec-round2.pdf">Grain-128AEAD - A lightweight AEAD stream cipher</a>. NIST 2019.<br>
         This is the official round 2 specification of the design (on NISTs website). Note that it is identical to the round 1 specification.</li>
+	<li>Martin Hell, Thomas Johansson, Willi Meier, Jonathan Sönnerup and Hirotaka Yoshida: <a href="C2SI2019_Grain_128AEAD.pdf">An AEAD variant of the Grain stream cipher</a>. C2SI 2019.<br>
+        This paper presents the core design of Grain-128AEAD. Note that it does not follow the NIST API as it does not e.g., explicitly handle variable length associated data.</li>
         </ul>
 
 
         <h3>Hardware implementation</h3>
         <ul>
-        <li>Jonathan Sönnerup, Martin Hell, Mattias Sönnerup and Ripudaman Khattar: <a href="HW_indo19.pdf">Efficient Hardware Implementations of Grain-128AEAD</a>. Indocrypt 2019. <br>
-        This paper presents a hardware implementation (VHDL) in 65nm technology. Synthesis and power simulations is done using the Synopsys Design Compiler 2013.12. The implementation can be found on the <a href="https://github.com/Grain-128AEAD">Grain-128AEAD repo</a> on Github.</li>
+        	<li>Jonathan Sönnerup, Martin Hell, Mattias Sönnerup and Ripudaman Khattar: <a href="HW_indo19.pdf">Efficient Hardware Implementations of Grain-128AEAD</a>. Indocrypt 2019. <br> 
+			This paper presents a hardware implementation (VHDL) in 65nm technology. Synthesis and power simulations is done using the Synopsys Design Compiler 2013.12. The implementation can be found on the <a href="https://github.com/Grain-128AEAD">Grain-128AEAD repo</a> on Github.</li>
         </ul>
 
 
         <h3>Software implementation</h3>
         <ul>
-        <li>The reference software implementation can be found in the <a href="https://github.com/Grain-128AEAD">Grain-128AEAD repo</a> on Github. The reference implementation is also available on <a href="https://csrc.nist.gov/Projects/lightweight-cryptography/round-2-candidates">NISTs round 2 website</a>.</li>
+		<li>The software implementation for Grain-128AEADv2 can be found in the <a href="https://csrc.nist.gov/CSRC/media/Projects/lightweight-cryptography/documents/finalist-round/updated-submissions/grain-128aead.zip">zip-file</a> on NISTs webpage. Note that there are both a reference implementation and optimized implementations. Make sure to use the optimized implementations for benchmarking.</li>
+        	<li>The reference software implementation for the original version (used in round 1 and round 2 of NIST LWC) can be found in the <a href="https://github.com/Grain-128AEAD">Grain-128AEAD repo</a> on Github. The reference implementation is also available on <a href="https://csrc.nist.gov/Projects/lightweight-cryptography/round-2-candidates">NISTs round 2 website</a>.</li>
 		<li>Alexander Maximov and Martin Hell: <a href="https://eprint.iacr.org/2020/659.pdf">Software Evaluation of Grain-128AEAD for Embedded Platforms</a>. ePrint 2020/659.<br>
-		This paper describes implementations optimized for embedded platforms. The two smallest processors in the FELICS-AEAD framework are used as target, the 8-bit AVR ATmega 128 and the 16-bit MSP430F1611.</li>
+			This paper describes implementations optimized for embedded platforms. The two smallest processors in the FELICS-AEAD framework are used as target, the 8-bit AVR ATmega 128 and the 16-bit MSP430F1611.</li>
         </ul>
 
 
